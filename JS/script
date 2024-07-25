@@ -1,0 +1,14 @@
+//OBTENEMOS EL BOTON QUE DETONARA EL EVENTO
+var botonAlternarEstilos = document.getElementById("cambiar-modo");
+
+//FUCNION QUE ESCUCHA EL CLCIK DEL BOTON
+botonAlternarEstilos.addEventListener('click', function() {
+  //OBTENEMOS EL ELEMENTO AL CUAL SE LE MODIFICARA LA CLASE
+  var mainContent = document.getElementById("main-content");
+  //SE VERIFICA LA CLASE ACTUAL DEL ELELEMENTO
+  if (mainContent.classList.contains('modo-claro')) {
+    mainContent.classList.replace('modo-claro', 'modo-obscuro');
+  } else if (mainContent.classList.contains('modo-obscuro')) {
+    mainContent.classList.replace('modo-obscuro', 'modo-claro');
+  }
+});
