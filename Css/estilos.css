@@ -344,7 +344,7 @@ margin: 0;
 }
 
 #titulos {
-
+  margin-top:100%
   margin: 0 auto; /* Centra el contenedor horizontalmente */
   margin-left: 15%;
 }
@@ -353,8 +353,8 @@ margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 70px;
-  max-height: 800px;
-  min-height:800px;
+  max-height:500px;
+  min-height:500px;
 }
 
 .titulo-item {
@@ -420,7 +420,7 @@ margin: 0;
   top: 0;
   left: 0;
   width: 100%;
-  height: 500vh;
+  height: 800vh;
   overflow: hidden;
   z-index: 0;
   background-color: transparent;
