@@ -344,7 +344,7 @@ margin: 0;
 }
 
 #titulos {
-  margin-top: 300%;
+
   margin: 0 auto; /* Centra el contenedor horizontalmente */
   margin-left: 15%;
 }
@@ -353,8 +353,8 @@ margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 70px;
-  margin-top: 300%;
-    max-height: 1000px;
+  max-height: 800px;
+  min-height:800px;
 }
 
 .titulo-item {
