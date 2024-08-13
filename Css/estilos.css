@@ -353,6 +353,7 @@ margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 70px;
+    margin-top: 300%;
 }
 
 .titulo-item {
