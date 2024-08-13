@@ -344,7 +344,7 @@ margin: 0;
 }
 
 #titulos {
-  margin-top: 20px;
+  margin-top: 150%;
   margin: 0 auto; /* Centra el contenedor horizontalmente */
   margin-left: 15%;
 }
