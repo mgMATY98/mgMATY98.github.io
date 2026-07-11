@@ -151,3 +151,125 @@ img {
     background-clip: text;
     color: transparent;
 }
+/* ==================== MEJORAS VISUALES ==================== */
+
+/* Espaciado general */
+#main-content {
+    padding: 90px 20px 60px;
+}
+
+/* Títulos principales más equilibrados */
+#main-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+}
+
+#main-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#main-content h3 {
+    font-size: 1.1rem;
+    color: #e0e0ff;
+    margin-bottom: 40px;
+}
+
+/* Botones más grandes y bonitos en móvil */
+#button_container {
+    gap: 18px;
+    margin: 35px 0;
+}
+
+#download-cv, #contacto {
+    padding: 16px 32px;
+    font-size: 1.15rem;
+    min-width: 160px;
+}
+
+/* Sección Sobre mí */
+#sobre-mi {
+    margin: 70px 0 60px;
+}
+
+#img-perfil {
+    width: 200px;
+    height: 200px;
+    margin: 25px auto;
+}
+
+/* Proyectos */
+#proyectos {
+    margin: 70px 0;
+}
+
+.proyecto {
+    padding: 25px;
+    margin-bottom: 45px;
+}
+
+.proyecto-info h5 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+/* Contacto */
+#contacto-info {
+    margin: 80px 0 40px;
+    gap: 30px;
+}
+
+#contacto-info a {
+    font-size: 1.15rem;
+}
+
+/* ==================== RESPONSIVE FINAL ==================== */
+@media (max-width: 576px) {
+    #main-content {
+        padding: 85px 18px 50px;
+    }
+    
+    #main-content h1 { font-size: 2.1rem; }
+    #main-content h2 { font-size: 1.75rem; }
+    
+    #button_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #download-cv, #contacto {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .proyecto {
+        padding: 20px;
+    }
+}
+/* ==================== FOTO DE PERFIL ==================== */
+#img-perfil {
+    width: 160px;           /* Más pequeña */
+    height: 160px;
+    object-fit: cover;      /* Mantiene proporción y se ve más prolija */
+    border-radius: 50%;
+    margin: 25px auto;
+    border: 6px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================== ICONOS DE CONTACTO ==================== */
+#contacto-info img {
+    width: 38px;            /* Más pequeños */
+    height: 38px;
+    transition: transform 0.3s;
+}
+
+#contacto-info a:hover img {
+    transform: scale(1.15);
+}
+
+/* Espaciado de los enlaces de contacto */
+#contacto-info a {
+    gap: 12px;
+    font-size: 1.05rem;
+}
