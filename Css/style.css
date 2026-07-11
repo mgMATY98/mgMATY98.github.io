@@ -168,3 +168,43 @@ a {
         justify-content: center;
     }
 }
+/* ==================== MODO CLARO ==================== */
+.modo-claro {
+    background: #f0f2f5;
+    color: #222;
+}
+
+.modo-claro .area {
+    background: linear-gradient(to left, #a8c0ff, #4e54c8);
+}
+
+.modo-claro h1,
+.modo-claro h2 {
+    background: linear-gradient(to left, #ff3366, #ff8833, #ffcc33);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.modo-claro h3,
+.modo-claro p,
+.modo-claro #proyectos h5 {
+    color: #444;
+}
+
+.modo-claro .proyecto {
+    background: rgba(0, 0, 0, 0.08);
+    border: 1px solid #ddd;
+}
+
+/* ==================== AJUSTES GENERALES ==================== */
+.proyecto-info p {
+    color: inherit;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+#proyectos {
+    margin-top: 60px;
+}
+
