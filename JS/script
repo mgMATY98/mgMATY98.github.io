@@ -4,12 +4,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!boton || !mainContent) return;
 
+    // Forzar inicio en Modo Oscuro
+    mainContent.classList.remove('modo-claro');
+    mainContent.classList.add('modo-obscuro');
+    boton.style.backgroundImage = "url('Imagenes/night-mode.png')";
+
+    // Alternar modo al hacer clic
     boton.addEventListener('click', function() {
         if (mainContent.classList.contains('modo-obscuro')) {
+            // Cambiar a Claro
             mainContent.classList.remove('modo-obscuro');
             mainContent.classList.add('modo-claro');
-            boton.style.backgroundImage = "url('Imagenes/moon.png')"; 
+            boton.style.backgroundImage = "url('Imagenes/moon.png')";
         } else {
+            // Cambiar a Oscuro
             mainContent.classList.remove('modo-claro');
             mainContent.classList.add('modo-obscuro');
             boton.style.backgroundImage = "url('Imagenes/night-mode.png')";
