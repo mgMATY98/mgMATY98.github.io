@@ -1,14 +1,26 @@
-//OBTENEMOS EL BOTON QUE DETONARA EL EVENTO
-var botonAlternarEstilos = document.getElementById("cambiar-modo");
+// Obtenemos los elementos
+const boton = document.getElementById("cambiar-modo");
+const mainContent = document.getElementById("main-content");
 
-//FUCNION QUE ESCUCHA EL CLCIK DEL BOTON
-botonAlternarEstilos.addEventListener('click', function() {
-  //OBTENEMOS EL ELEMENTO AL CUAL SE LE MODIFICARA LA CLASE
-  var mainContent = document.getElementById("main-content");
-  //SE VERIFICA LA CLASE ACTUAL DEL ELELEMENTO
-  if (mainContent.classList.contains('modo-claro')) {
-    mainContent.classList.replace('modo-claro', 'modo-obscuro');
-  } else if (mainContent.classList.contains('modo-obscuro')) {
-    mainContent.classList.replace('modo-obscuro', 'modo-claro');
-  }
-});
+// Función para alternar modo
+function alternarModo() {
+    if (mainContent.classList.contains('modo-obscuro')) {
+        mainContent.classList.remove('modo-obscuro');
+        mainContent.classList.add('modo-claro');
+        boton.style.backgroundImage = "url('../Imagenes/sun.png')"; // imagen de sol
+    } else {
+        mainContent.classList.remove('modo-claro');
+        mainContent.classList.add('modo-obscuro');
+        boton.style.backgroundImage = "url('../Imagenes/night-mode.png')";
+    }
+}
+
+// Evento click
+boton.addEventListener('click', alternarModo);
+
+// Opcional: Guardar preferencia del usuario
+if (localStorage.getItem('modo') === 'claro') {
+    mainContent.classList.remove('modo-obscuro');
+    mainContent.classList.add('modo-claro');
+    boton.style.backgroundImage = "url('../Imagenes/sun.png')";
+}
