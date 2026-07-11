@@ -222,3 +222,24 @@ body, html {
         max-width: 45%;
     }
 }
+/* ==================== ICONOS JAVA ==================== */
+.java, .java2 {
+    max-width: 80px !important;
+    height: auto !important;
+    margin: 8px 5px;
+}
+
+.imagenes-cont, .imagenes-cont2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Imágenes grandes de proyectos */
+.imagen1, .imagen2 {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 12px;
+}
