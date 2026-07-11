@@ -1,21 +1,38 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
+/* ==================== NORMALIZE + BASE ==================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     font-family: 'Exo', sans-serif;
     color: #fff;
     line-height: 1.6;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-style: none;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
 }
 
 /* ==================== FONDO ANIMADO ==================== */
 .area {
-    background: #4e54c8;
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+    background: linear-gradient(to left, #8f94fb, #4e54c8);
     width: 100%;
     min-height: 100vh;
     position: relative;
@@ -24,10 +41,8 @@ body {
 
 .circles {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     overflow: hidden;
     z-index: 1;
 }
@@ -41,7 +56,7 @@ body {
     bottom: -150px;
 }
 
-/* Mantengo tus animaciones originales */
+/* Tus animaciones originales */
 .circles li:nth-child(1){ left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
 .circles li:nth-child(2){ left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
 .circles li:nth-child(3){ left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
@@ -54,16 +69,8 @@ body {
 .circles li:nth-child(10){ left: 85%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 11s; }
 
 @keyframes animate {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-    }
-    100% {
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
-    }
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 0; }
+    100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; }
 }
 
 /* ==================== CONTENIDO PRINCIPAL ==================== */
@@ -75,12 +82,6 @@ body {
     margin: 0 auto;
 }
 
-.hola {
-    list-style: none;
-    text-align: right;
-    margin-bottom: 20px;
-}
-
 #button_container {
     margin: 30px 0;
     display: flex;
@@ -90,41 +91,20 @@ body {
 
 #download-cv, #contacto {
     padding: 14px 28px;
-    text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     font-size: 1.1rem;
-    display: inline-block;
 }
 
-#download-cv {
-    background: #fff;
-    color: #4e54c8;
-}
-
-#contacto {
-    border: 2px solid #fff;
-    color: #fff;
-}
-
-/* Sobre mí */
-#sobre-mi {
-    margin: 40px 0;
-    text-align: center;
-}
+#download-cv { background: #fff; color: #4e54c8; }
+#contacto { border: 2px solid #fff; color: #fff; }
 
 #img-perfil {
     max-width: 220px;
-    height: auto;
     border-radius: 50%;
     margin: 25px auto;
     display: block;
     border: 4px solid rgba(255,255,255,0.3);
-}
-
-/* Proyectos */
-#proyectos {
-    margin: 50px 0;
 }
 
 .proyecto {
@@ -137,30 +117,16 @@ body {
     gap: 20px;
 }
 
-.proyecto-info h5 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.imagen1, .imagen2 {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-}
-
 .btn-ver-proyecto {
     display: inline-block;
     margin-top: 15px;
-    padding: 10px 20px;
+    padding: 10px 22px;
     background: #fff;
     color: #4e54c8;
-    text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
 }
 
-/* Contacto */
 #contacto-info {
     display: flex;
     flex-direction: column;
@@ -168,47 +134,24 @@ body {
     margin-top: 40px;
 }
 
-#contacto-info a {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.1rem;
-}
-
 #contacto-info img {
     width: 45px;
     height: 45px;
 }
 
-/* ==================== RESPONSIVE - CELULARES ==================== */
+/* ==================== CELULARES ==================== */
 @media (max-width: 576px) {
-    .context h1 {
-        font-size: 38px;
-    }
+    #main-content { padding: 15px 12px; }
     
-    #main-content {
-        padding: 15px 12px;
-    }
+    h1 { font-size: 2.3rem; }
+    h2 { font-size: 1.85rem; }
+    h3 { font-size: 1.2rem; }
     
-    h1 { font-size: 2.4rem; }
-    h2 { font-size: 1.9rem; }
-    h3 { font-size: 1.15rem; }
-    
-    #button_container {
-        flex-direction: column;
-        align-items: center;
-    }
+    #button_container { flex-direction: column; }
     
     #download-cv, #contacto {
         width: 100%;
-        text-align: center;
         padding: 16px;
-    }
-    
-    .proyecto {
-        padding: 18px;
     }
 }
 
@@ -217,19 +160,11 @@ body {
         flex-direction: row;
         align-items: center;
     }
-    
-    .proyecto-info {
-        flex: 1;
-    }
-    
-    .imagen1, .imagen2 {
-        width: 48%;
-        max-height: 320px;
-    }
+    .imagen1, .imagen2 { width: 48%; }
     
     #contacto-info {
         flex-direction: row;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
     }
 }
